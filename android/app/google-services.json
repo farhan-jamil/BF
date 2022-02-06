@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1040496750436",
+    "project_id": "reactnativemyself",
+    "storage_bucket": "reactnativemyself.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040496750436:android:ca3a765c53f7d598195471",
+        "android_client_info": {
+          "package_name": "com.notifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040496750436-tp6v105a5tbdf9e34p47fu26skspqkhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGsu7ErAS-1V9bBmjsL9zUwv9yfOSmr5o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040496750436-tp6v105a5tbdf9e34p47fu26skspqkhd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
