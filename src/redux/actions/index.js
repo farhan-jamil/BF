@@ -1,11 +1,12 @@
+import * as actions from './actionTypes'
 export const getLogin = (loginInfo) => {
     return {
-        type: "Get_Login",
-        loginInfo
+        type: actions.LOGIN_SUCCESS,
+        payload: loginInfo
     }
 }
 export const getLogout=()=>{
     return{
-        type:'Get_Logout'
+        type:actions.LOGOUT_REQUEST
     }
 }

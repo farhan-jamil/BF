@@ -4,7 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import Header from '../../component/Header';
 import { useDispatch } from 'react-redux';
 import { getLogin, getLogout } from '../../redux/actions';
-
+import { LOGOUT_REQUEST } from '../../redux/actions/actionTypes';
 import { color } from '../../component/Colors';
 import { h2 } from '../../component/Texts';
 import AntDesign from 'react-native-vector-icons/AntDesign'
@@ -12,7 +12,9 @@ export default function Logout() {
     const dispatch = useDispatch()
     return (
 
-        <Header title='Logout' name='logout' onpress={()=>dispatch(getLogout())} />
+        <Header title='Logout' name='logout'
+            onpress={() => dispatch({ type: LOGOUT_REQUEST })}
+        />
 
     );
 }

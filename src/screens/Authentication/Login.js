@@ -9,13 +9,13 @@ import TextInputEmail from '../../component/TextInputEmail';
 import Buttons from '../../component/Buttons';
 import { color } from '../../component/Colors';
 import { useSelector, useDispatch } from 'react-redux';
-import {getLogin} from '../../redux/actions'
-
+import { getLogin } from '../../redux/actions'
+import { LOGIN_SUCCESS } from '../../redux/actions/actionTypes'
 export default function Login() {
     // const getValue = useSelector(state => state.LoginReducer)
     const dispatch = useDispatch()
-    const [loginEmail, setLoginEmail] = useState('')
-    const [loginPassword, setLoginPassword] = useState('')
+    const [loginEmail, setLoginEmail] = useState('farhan')
+    const [loginPassword, setLoginPassword] = useState('1234')
 
     const [displayEmailError, setDisplayEmailError] = useState('')
     const [displayPasswordError, setDisplayPasswordError] = useState('')
@@ -42,6 +42,11 @@ export default function Login() {
             let loginInfo = { loginEmail, loginPassword }
             //     // console.log('from Login Screen',loginInfo)
             dispatch(getLogin(loginInfo))
+            // // this case will working when we didnot define the action in redux according to my knowledge
+            // dispatch({
+            //     type: LOGIN_SUCCESS,
+            //     payload: loginInfo
+            // })
             //     // navigation.navigate('HomeScreen')
 
             //     // console.log('Hi from Login' +JSON.stringify(getValue));
@@ -113,7 +118,7 @@ export default function Login() {
 
                     <View style={{ marginHorizontal: wp(5) }}>
 
-                        <Buttons onpress={loginFun} title='Login'/>
+                        <Buttons onpress={loginFun} title='Login' />
                     </View>
 
 

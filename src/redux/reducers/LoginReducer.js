@@ -1,4 +1,4 @@
-
+import * as actions from '../actions/actionTypes'
 const initialData = {
     email: 'farhan',
     password: '1234',
@@ -7,10 +7,10 @@ const initialData = {
 const LoginReducer = (state = initialData, action) => {
     switch (action.type) {
 
-        case "Get_Login":
+        case actions.LOGIN_SUCCESS:
 
             // console.log(action.loginInfo);
-            if (state.email == action.loginInfo.loginEmail && state.password == action.loginInfo.loginPassword) {
+            if (state.email == action.payload.loginEmail && state.password == action.payload.loginPassword) {
                 console.log('Hi from redux');
                 return {
                     ...state,
@@ -29,7 +29,7 @@ const LoginReducer = (state = initialData, action) => {
 
             }
 
-            case "Get_Logout":
+            case actions.LOGOUT_REQUEST:
            
                 return {
                     ...state,
